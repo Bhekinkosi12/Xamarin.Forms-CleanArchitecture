@@ -19,8 +19,9 @@ namespace XamarinFormsClean.Common.Presentation.ViewModels
         IInitialize,
         IInitializeAsync,
         INavigationAware,
-        IAutoInitialize
+        IAutoInitialize,
     {
+    
         private readonly Subject<Unit> _whenDisposedSubject;
         private readonly Subject<INavigationParameters> _whenInitializedSubject;
         private readonly Subject<INavigationParameters> _whenNavigatedToSubject;
@@ -97,6 +98,8 @@ namespace XamarinFormsClean.Common.Presentation.ViewModels
             _whenNavigatedFromSubject.Dispose();
         }
 
+        
+        
         public abstract class State
         {
             public static readonly State None = new NoneState();
